@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(
@@ -60,11 +59,16 @@ class ChatMessage extends StatelessWidget {
           children: [
             Container(
               margin: const EdgeInsets.only(right: 16.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50.0),
+              width: 50.0,
+              height: 50.0,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: NetworkImage('name')
-                )
+                  image: NetworkImage(
+                      "https://raw.githubusercontent.com/farukumarx64/Friendly-Chat/master/assets/pro_pic_n.jpg"),
+                  fit: BoxFit.fill,
+                ),
+
               ),
             ),
             Expanded(
